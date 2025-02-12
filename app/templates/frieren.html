@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Frieren Page {% endblock title %}
+
+{% block main %}
+
+<div id="products">
+    <div class="pro">
+        <div class="proinfo">
+            <a href=""><img src="{% static 'img/figure/p1.jpg' %}" alt=""></a>
+            <span>Frieren</span>
+            <h5>Solo Frieren Figurine</h5>
+            <div class="i">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <div class="price">
+                    <h5>N50,000</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="prodetails">
+        <h1>Product Details</h1>
+        <span>this is our product Lorem ipsum dolor sit amet consectetur<br>
+            adipisicing elit. Cum sapiente reiciendis, laborum eveniet animi<br>
+             ab incidunt voluptate libero earum, repudiandae aspernatur corporis <br>
+             distinctio quasi culpa! Illum voluptatibus cupiditate vero necessitatibus!</span>
+        <a href="{% url 'shop' %}" class="a1">Go Back</a>
+    </div>
+</div>
+
+{% endblock main %}

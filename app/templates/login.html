@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Log In {% endblock title %}
+{% block main %}
+
+<body id="bg" style="background-image: url('{% static 'img/pok.jpg' %}')">
+    <form class="box" method="post">
+        <h2>Login</h2>
+        {% csrf_token %}
+        <!-- <label>Username</label><br> -->
+        <input type="text" name="username" placeholder="Your Username"><br>
+        <!-- <label>Password</label><br> -->
+        <input type="password" name="password" placeholder="Your Password"><br>
+        <button>Login</button>
+        <p class="loginp">Don't have an Account? <a href="{% url 'signup' %}" class="url">Sign up</a></p>
+    </form><br>
+
+
+    {% endblock main %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Sign Up {% endblock title %}
+{% block main %}
+
+
+<body id="bg" style="background-image: url('{% static 'img/pok.jpg' %}')" method="post">
+    <form class="box2" method="post">
+        <h2>Sign Up</h2>
+        {% csrf_token %}
+        <!-- <label>Username</label><br> -->
+        <input type="text" name="username" placeholder="Your Username"><br>
+        <!-- <label>Email</label><br> -->
+        <input type="email" name="email" placeholder="Your Email"><br>
+        <!-- <label>Password</label><br> -->
+        <input type="password" name="password" placeholder="Your Password"><br>
+        <!-- <label>Confirm Password</label><br> -->
+        <input type="password" name="confirm_password" placeholder="Confirm Password"><br>
+        <button>Sign up</button>
+        <p class="signupp">Already have an Account? <a href="{% url 'login' %}" class="url">Log in</a></p>
+    </form>
+
+    {% endblock main %}
